@@ -1,27 +1,37 @@
+# Back end 
+rest-api/.idea/
+rest-api/.vscode/
+rest-api/node_modules/
+rest-api/build/
+rest-api/tmp/
+rest-api/temp/
+
+
+# front end
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+calabash-festival/dist
+calabash-festival/tmp
+calabash-festival/out-tsc
 # Only exists if Bazel was run
-/bazel-out
+calabash-festival/bazel-out
 
 # dependencies
-/node_modules
+calabash-festival/node_modules
 
 # profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
+calabash-festival/chrome-profiler-events*.json
+calabash-festival/speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+calabash-festival/.idea
+calabash-festival/.project
+calabash-festival/.classpath
+calabash-festival/.c9/
+calabash-festival/*.launch
+calabash-festival/.settings/
+calabash-festival/*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -32,15 +42,15 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+calabash-festival/.sass-cache
+calabash-festival/connect.lock
+calabash-festival/coverage
+calabash-festival/libpeerconnection.log
+calabash-festival/npm-debug.log
+calabash-festival/yarn-error.log
+calabash-festival/testem.log
+calabash-festival/typings
 
 # System Files
-.DS_Store
-Thumbs.db
+calabash-festival/.DS_Store
+calabash-festival/Thumbs.db

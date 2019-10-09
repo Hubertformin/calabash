@@ -1,0 +1,154 @@
+<app-toolbar></app-toolbar>
+
+<section id="banner">
+  <ring-carousel #carousel ringsDuration="800" ringsDelay="100" ringsCount="6">
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-green">
+        <div class="text-center">1st div</div>
+      </div>
+    </ng-template>
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-blue">
+        <div class="text-center">2nd div</div>
+      </div>
+    </ng-template>
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-orange">
+        <div class="text-center">3rd div</div>
+      </div>
+    </ng-template>
+  </ring-carousel>
+  <button id="carouselNextBtn" class="d-none" (click)="carousel.next()"></button>
+</section>
+<!-- section === about-->
+<section id="about" class="pt-32 h-75 px-8">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">About</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+    <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias,
+          assumenda at ducimus ex illo incidunt ipsam numquam odit optio pariatur possimus quia quibusdam quos tenetur ut veniam vitae,
+          voluptatem.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- Events -->
+<section id="events" class="pt-32">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">Events</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+      <section class="tabs-container text-center py-8 h-32 px-2">
+        <button (click)="eventTab = 'upcoming'" [ngClass]="{'bg-yellow-dark': eventTab === 'upcoming' }" class="rounded-full outline-none py-3 cursor-pointer px-6 shadow mr-1">Upcoming events</button>|
+        <button (click)="eventTab = 'passed'" [ngClass]="{'bg-yellow-dark': eventTab === 'passed' }"
+                class="rounded-full outline-none py-3 cursor-pointer px-6 shadow ml-1">Passed events</button>
+      </section>
+      <section [ngSwitch]="eventTab" class="tab-view">
+        <!--    upcoming events-->
+        <div *ngSwitchCase="'upcoming'" id="upcoming_events" class="row px-8 pt-6">
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 pt-2">
+                <div class="font-bold text-xl mb-2">The calabash event</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+              <div class="px-6 py-3 text-center">
+                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 pt-2">
+                <div class="font-bold text-xl mb-2">The calabash event</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+              <div class="px-6 py-3 text-center">
+                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 pt-2">
+                <div class="font-bold text-xl mb-2">The calabash event</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+              <div class="px-6 py-3 text-center">
+                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--    passed events-->
+        <div *ngSwitchCase="'passed'" id="passed_events" class="row px-8 pt-6">
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The calabash event(Passed)</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The calabash event</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The calabash event</div>
+                <p class="text-gray-700 text-base">This is the calabash event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </section>
+</section>
+<!-- contact -->
+<section id="contact" class="py-32">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">Contact Us</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+    <form class="px-8">
+      <div class="py-3">
+        <label for="c_name">Name</label>
+        <input id="c_name" type="text" placeholder="Enter name" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" />
+      </div>
+      <div class="py-3">
+        <label for="c_email">Email</label>
+        <input id="c_email" type="email" placeholder="Email" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" />
+      </div>
+      <div class="py-3">
+        <label for="c_msg">Message</label>
+        <textarea name="" id="c_msg" placeholder="Message" cols="30" rows="10" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"></textarea>
+      </div>
+      <div class="py-3">
+        <button class="rounded-full py-3 cursor-pointer px-6 shadow bg-yellow-dark mr-4">send</button>
+      </div>
+    </form>
+  </section>
+</section>
+<!-- footer -->
+<app-footer></app-footer>
