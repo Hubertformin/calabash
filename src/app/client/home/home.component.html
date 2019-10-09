@@ -1,1 +1,79 @@
-<p>home works!</p>
+<app-toolbar></app-toolbar>
+
+<section id="banner">
+  <ring-carousel #carousel ringsDuration="800" ringsDelay="100" ringsCount="6">
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-green">
+        <div class="text-center">1st div</div>
+      </div>
+    </ng-template>
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-blue">
+        <div class="text-center">2nd div</div>
+      </div>
+    </ng-template>
+    <ng-template ringCarouselItem>
+      <div style= "height: 500px;" class="bg-orange">
+        <div class="text-center">3rd div</div>
+      </div>
+    </ng-template>
+  </ring-carousel>
+  <button id="carouselNextBtn" class="d-none" (click)="carousel.next()"></button>
+</section>
+<!-- section === about-->
+<section id="about" class="pt-32 h-75 px-8">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">About</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+    <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias,
+          assumenda at ducimus ex illo incidunt ipsam numquam odit optio pariatur possimus quia quibusdam quos tenetur ut veniam vitae,
+          voluptatem.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- Events -->
+<section id="events" class="pt-32 h-75 px-8">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">Events</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-"></div>
+    </div>
+  </section>
+</section>
+<!-- contact -->
+<section id="contact" class="py-32 h-75 px-8">
+  <section class="section-title text-center">
+    <h2 class="title font-vibes">Contact Us</h2>
+    <p class="line"><span></span></p>
+  </section>
+  <section class="section-body py-6">
+    <div class="px-32">
+      <div class="py-3">
+        <label for="c_name">Name</label>
+        <input id="c_name" type="text" placeholder="Enter name" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" />
+      </div>
+      <div class="py-3">
+        <label for="c_email">Email</label>
+        <input id="c_email" type="email" placeholder="Email" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" />
+      </div>
+      <div class="py-3">
+        <label for="c_msg">Message</label>
+        <textarea name="" id="c_msg" placeholder="Message" cols="30" rows="10" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"></textarea>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- footer -->
+<app-footer></app-footer>
