@@ -3,6 +3,7 @@ import { UserEntity } from "../entity/user.entity";
 const express = require('express');
 export const UserRouter = express.Router();
 
+//Get all users
 UserRouter.get('/', (req, res) => {
     UserEntity.find()
     .then((users) => {
@@ -14,6 +15,7 @@ UserRouter.get('/', (req, res) => {
     });
 })
 
+//Authenticate User
 UserRouter.get('/auth/:username/:password', (req, res) => {
     const { username, password } = req.params;
     console.log('Authentication route..');
@@ -27,3 +29,4 @@ UserRouter.get('/auth/:username/:password', (req, res) => {
         res.status(400).end()
     })
 });
+
