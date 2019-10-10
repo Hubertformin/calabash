@@ -3,6 +3,7 @@ import {createConnection} from "typeorm";
 import { UserEntity} from "./entity/user.entity";
 import { UserRouter } from "./routes/user.route";
 import { EventRouter } from "./routes/event.route";
+import { TicketRouter } from "./routes/ticket.route";
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -50,6 +51,8 @@ createConnection()
     app.use('/users', UserRouter);
     // event's route
     app.use('/events', EventRouter);
+    // tickets route
+    app.use('/tickets', TicketRouter);
 
 
     const PORT = process.env.PORT || 5000;
