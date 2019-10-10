@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CarouselModule} from 'ngx-carousels';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {AlertModule} from 'ngx-alerts';
 
 
 
@@ -10,11 +12,13 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxPaginationModule
   ],
   exports: [
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxPaginationModule
   ]
 })
 export class SharedModule { }
