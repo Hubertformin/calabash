@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/providers/http.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  p = 1;
+  collection = new Array(100);
+  events = [];
+  tickets = [];
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.http.getAllEvents()
+    .subscribe((events: any[]) => {
+      console.log(events)
+    })
   }
 
 }

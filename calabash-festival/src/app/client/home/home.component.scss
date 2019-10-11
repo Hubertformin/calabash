@@ -35,6 +35,13 @@ p.line {
   }
 }
 
+#about-body {
+  position: relative;
+  background: url("../../../assets/images/big-concert.jpg") no-repeat center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
 #events {
   .tab-view {
     @include md-screens {
@@ -43,6 +50,24 @@ p.line {
   }
 }
 
+#partners {
+  height: auto;
+  background: url("../../../assets/images/music-concert.jpg") no-repeat center fixed;
+  background-size: cover;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+    margin: .85rem 0;
+    @include md-screens {
+      width: auto;
+      height: 100px;
+      margin: 0 0.75rem;
+    }
+  }
+}
+
+
 #contact {
   form {
     @include md-screens {
@@ -50,4 +75,13 @@ p.line {
     }
   }
 }
+.text-theme {
+  color: #f2d024;
+}
 
+div.bg {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}

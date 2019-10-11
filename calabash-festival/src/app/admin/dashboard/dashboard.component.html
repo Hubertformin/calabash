@@ -1,1 +1,24 @@
-<p>dashboard works!</p>
+<app-admin-toolbar></app-admin-toolbar>
+<section id="admin-body" class="px-8 py-4">
+  <!-- <ul>
+    <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">user + {{item}}</li>
+  </ul>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+ <div class="row">
+   <!-- event card. -->
+   <div class="col-sm-4">
+    <div class="card border bg-purple text-white shadow w-full h-24 px-4 py-2 text-right">
+      <h4>Events</h4>
+      <h1>{{events.length}}</h1>
+    </div>
+   </div>
+   <!-- tickets card. -->
+   <div class="col-sm-4">
+    <div class="card border bg-green-dark text-white shadow w-full px-4 py-2 h-24 text-right">
+      <h4>Tickets</h4>
+      <h1>{{tickets.length}}</h1>
+    </div>
+   </div>
+ </div>
+</section>

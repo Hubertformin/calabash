@@ -1,0 +1,51 @@
+<app-admin-toolbar></app-admin-toolbar>
+<section id="admin-body">
+  <div class="action text-right py-6 px-8">
+    <button class="px-4 py-3 shadow bg-yellow-dark rounded">Add event</button>
+  </div>
+  <div class="body px-8 py-4">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+      <tr>
+        <td>#</td>
+        <td></td>
+        <td>Name</td>
+        <td>Start date</td>
+        <td>End date</td>
+        <td>venue</td>
+        <td>action</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let event of events; let i = index;">
+        <td>{{i + 1 }}</td>
+        <td>
+          <img [src]="event.imageUrl" style="width: 75px;height: 75px;" alt="event_image">
+        </td>
+        <td>{{event.name}}</td>
+        <td>{{event.startDate}}</td>
+        <td>{{event.endDate}}</td>
+        <td>{{event.venue}}</td>
+        <td><fa-icon [icon]="editIcon"></fa-icon></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!--  always put modal in admin-body-->
+  <section class="modal">
+    <div class="modal-title">
+      <h3 class="">Add event</h3>
+    </div>
+    <div class="modal-body">
+      <form action="" class="row h-full">
+        <div class="col-sm-8 h-full"></div>
+        <div class="col-sm-4 h-full border-l"></div>
+      </form>
+    </div>
+    <div class="modal-action text-right">
+      <button class="mr-3 shadow p-2 bg-yellow-dark">save</button>
+      <button class="shadow p-2">cancel</button>
+    </div>
+  </section>
+</section>

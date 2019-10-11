@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoadingBarRouterModule} from '@ngx-loading-bar/router';
 import {AlertModule} from 'ngx-alerts';
 import {HttpClientModule} from '@angular/common/http';
+import {LoadingBarHttpClientModule} from '@ngx-loading-bar/http-client';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     LoadingBarRouterModule,
+    LoadingBarHttpClientModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 5000, position: 'right'})
   ],
   providers: [],

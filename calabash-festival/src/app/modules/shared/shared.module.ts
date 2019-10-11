@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {CarouselModule} from 'ngx-carousels';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {NgxPaginationModule} from 'ngx-pagination';
-import {AlertModule} from 'ngx-alerts';
 
 
 
@@ -13,7 +12,7 @@ import {AlertModule} from 'ngx-alerts';
     CommonModule,
     CarouselModule,
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   exports: [
     CarouselModule,

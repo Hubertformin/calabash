@@ -16,7 +16,8 @@ export class AuthComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private title: Title, private http: HttpService, private alertService: AlertService, private authService: AdminAuthService) { }
+  constructor(private title: Title, private http: HttpService, private alertService: AlertService,
+    private authService: AdminAuthService) { }
 
   ngOnInit() {
     this.title.setTitle('Login - Calabash(Admin)');
@@ -42,6 +43,8 @@ export class AuthComponent implements OnInit {
         } else {
           this.authService.authenticate(user);
         }
+      }, (err) => {
+        this.alertService.danger(err);
       });
   }
 }

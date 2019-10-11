@@ -6,14 +6,23 @@ import { AuthComponent } from './auth/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { DataTablesModule } from 'angular-datatables';
+
+import { AdminToolbarComponent } from './@components/admin-toolbar/admin-toolbar.component';
+import {SharedModule} from '../modules/shared/shared.module';
+import { EventsComponent } from './events/events.component';
+import { TicketsComponent } from './tickets/tickets.component';
+
 
 @NgModule({
-  declarations: [AuthComponent, DashboardComponent],
+  declarations: [AuthComponent, DashboardComponent, AdminToolbarComponent, EventsComponent, TicketsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
+    DataTablesModule
   ]
 })
 export class AdminModule { }

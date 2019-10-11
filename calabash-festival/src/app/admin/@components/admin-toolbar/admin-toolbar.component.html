@@ -1,0 +1,20 @@
+<header>
+  <nav id="top-bar" class="shadow row">
+    <ul class="w-full text-right px-8">
+      <li>
+        <a class="shadow" href="">Log out</a>
+      </li>
+    </ul>
+  </nav>
+  <nav id="sidenav">
+    <h4 class="pt-8 px-4 pb-8 mb-4 border-b">
+      Calabash<small style="font-size: 50%">Admin</small>
+    </h4>
+    <ul>
+      <li><a routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/admin/events" routerLinkActive="active">Events</a></li>
+      <li><a routerLink="/admin/tickets" routerLinkActive="active">Tickets</a></li>
+      <li (click)="logOut()" class="lg:hidden sm:block"><a href="#">Log out</a></li>
+    </ul>
+  </nav>
+</header>

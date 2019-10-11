@@ -1,0 +1,70 @@
+@import "../../../@mixins/mixins";
+
+// variables
+$toolbar-color: #444;
+$toolbar-bg: white;
+$toolbar-height: 55px;
+//
+$sidebar-width: 250px;
+$sidebar-bg: #333;
+$sidebar-color: #fff;
+
+nav#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include md-screens {
+    left: $sidebar-width;
+  }
+  right: 0;
+  height: $toolbar-height;
+  line-height: $toolbar-height;
+  background-color: $toolbar-bg;
+  ul {
+    height: 100%;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        text-decoration: none;
+        color: $toolbar-color;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+nav#sidenav {
+  display: none;
+  position: fixed;
+  width: $sidebar-width;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: $sidebar-bg;
+  color: $sidebar-color;
+  @include md-screens {
+    display: block;
+  }
+  ul {
+    width: 100%;
+    margin: 0;
+    li {
+      a {
+        display: block;
+        padding: 10px 0.75rem;
+        text-decoration: none;
+        color: $sidebar-color;
+        &.active {
+          background-color: #f2d024;
+          color: #ffffff;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.12);
+        }
+
+      }
+    }
+  }
+}

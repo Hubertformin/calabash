@@ -1,7 +1,7 @@
 <app-toolbar></app-toolbar>
 
 <section id="banner">
-  <ring-carousel #carousel ringsDuration="800" ringsDelay="100" ringsCount="6">
+  <ring-carousel #carousel ringsDuration="800" [enableControl]="false" ringsDelay="100" ringsCount="6">
     <ng-template ringCarouselItem>
       <div style= "height: 500px;" class="bg-green">
         <div class="text-center">1st div</div>
@@ -21,20 +21,36 @@
   <button id="carouselNextBtn" class="d-none" (click)="carousel.next()"></button>
 </section>
 <!-- section === about-->
-<section id="about" class="pt-32 h-75 px-8">
-  <section class="section-title text-center">
+<section id="about" class="pt-32 pb-6">
+  <section class="section-title text-center px-8">
     <h2 class="title font-vibes">About</h2>
     <p class="line"><span></span></p>
   </section>
-  <section class="section-body py-6">
-    <div class="row">
-      <div class="col-sm-6"></div>
-      <div class="col-sm-6">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias,
-          assumenda at ducimus ex illo incidunt ipsam numquam odit optio pariatur possimus quia quibusdam quos tenetur ut veniam vitae,
-          voluptatem.
-        </p>
+  <section id="about-body" class="section-body">
+    <div class="bg py-8">
+      <h2 class="text-center pt-16 pb-4 text-4xl">What is it?</h2>
+      <div class="row">
+        <div class="col-sm-4 mb-16 text-center">
+          <!--        <img src="../../../assets/images/big-concert.jpg" alt="" class="my-2 rounded-full" />-->
+          <h4 class="mb-4 text-theme">Big concert</h4>
+          <p>
+            One big international artist will join two big Cameroonian artists for a lavish weekend of music at Cameroon’s most prestigious concert Arena, Las Vegas VIP (sits 2000 people in comfort, all with a clear view of the stage), as well as other venues such as stadiums/CAMTEL Bepanda.
+          </p>
+        </div>
+        <div class="col-sm-4 mb-16 text-center">
+          <!--        <img src="../../../assets/images/music-night.jpg" alt="" class="my-2 rounded-full" />-->
+          <h4 class="mb-4 text-theme">Industry Discovery Night </h4>
+          <p>
+            to take place at Las Vegas VIP 2 weeks before each Big Concert  - an established artist performs alongside many upcoming artists, and the platform helps expose the young artists to the media and promoters. From this platform, one upcoming artist is chosen to open up for the main artists at the BIG CONCERT.
+          </p>
+        </div>
+        <div class="col-sm-4 mb-16 text-center">
+          <!--        <img src="../../../assets/images/music-concert.jpg" alt="" class="my-2 rounded-full" />-->
+          <h4 class="mb-4 text-theme">Music concert</h4>
+          <p>
+            2 days before event, music professionals, artists, media, and other stakeholders will  meet to discuss salient issues concerning the Cameroonian Music industry and propose solutions, while benefiting from input  from invited international artists and major Cameroonian acts involved in the BIG CONCERTS.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -124,6 +140,20 @@
       </section>
   </section>
 </section>
+
+<!-- partners logo-->
+<section id="partners">
+<!--  logos-->
+  <div class="bg w-full h-full px-8 py-20">
+    <h1 class="py-6">Our partners</h1>
+    <img src="../../../assets/images/Trace_Africa_logo_2011.svg.png" class="" alt="">
+    <img src="../../../assets/images/equinox.jpg" class="" alt="">
+    <img src="../../../assets/images/canal-2.jpg" class="" alt="">
+    <img src="../../../assets/images/abk-logo.png" class="" alt="">
+    <img src="../../../assets/images/balafon-logo.png" class="" alt="">
+  </div>
+</section>
+
 <!-- contact -->
 <section id="contact" class="py-32">
   <section class="section-title text-center">

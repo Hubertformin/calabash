@@ -1,3 +1,4 @@
+@import "app/@mixins/mixins";
 /* You can add global styles to this file, and also import other style files */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 html, body { height: 100%; }
@@ -6,4 +7,49 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .font-vibes {
   font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+#admin-body {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include md-screens {
+    left: 250px;
+  }
+
+}
+
+.modal {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  .modal-title {
+    height: 10%;
+  }
+  .modal-body {
+    height: 80%;
+    overflow-y: auto;
+  }
+  .modal-action {
+    height: 10%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dataTables_wrapper .dataTables_filter input, .dataTables_wrapper .dataTables_filter select {
+  border: 1px solid #dddddd;
+  padding: 0.75rem;
 }
