@@ -55,9 +55,9 @@ TicketRouter.post("/", (req, res) => {
 });
 
 // Update a ticket
-TicketRouter.put("/:id", (req, res) => {
-    const {firstName, lastName, purchaseCode, event } = req.body;
-    TicketEntity.update(req.params.id, {firstName, lastName, purchaseCode, event })
+TicketRouter.post("/:id", (req, res) => {
+    const {firstName, lastName, purchaseCode } = req.body;
+    TicketEntity.update(req.params.id, {firstName, lastName, purchaseCode})
     .then(ticket => {
         res.json(ticket);
     })

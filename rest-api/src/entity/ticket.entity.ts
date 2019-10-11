@@ -15,7 +15,9 @@ export class TicketEntity extends BaseEntity {
     @Column({unique: true})
     purchaseCode: string;
 
-    @ManyToOne(type => EventEntity, event => event.tickets)
+    @ManyToOne(type => EventEntity, event => event.tickets, {
+        cascade: true,
+    })
     event: EventEntity;
     
     @CreateDateColumn()
