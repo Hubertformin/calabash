@@ -33,19 +33,24 @@
   </div>
 
 <!--  always put modal in admin-body-->
-  <section class="modal">
+  <section class="modal border-t">
     <div class="modal-title">
       <h3 class="">Add event</h3>
     </div>
     <div class="modal-body">
       <form action="" class="row h-full">
-        <div class="col-sm-8 h-full"></div>
-        <div class="col-sm-4 h-full border-l"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 border-l h-full">
+          <div class="form-field py-3">
+            <label for="username"></label>
+            <input id="username"  type="text" placeholder="Username" class="rounded w-full px-3 py-3 shadow border" />
+          </div>
+        </div>
       </form>
     </div>
-    <div class="modal-action text-right">
-      <button class="mr-3 shadow p-2 bg-yellow-dark">save</button>
-      <button class="shadow p-2">cancel</button>
+    <div class="modal-action text-right pt-1 px-2">
+      <button class="mr-3 shadow py-3 px-4 rounded bg-yellow-dark">save</button>
+      <button class="shadow py-3 px-4 rounded">cancel</button>
     </div>
   </section>
 </section>

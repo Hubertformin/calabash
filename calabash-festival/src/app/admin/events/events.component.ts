@@ -15,7 +15,8 @@ export class EventsComponent implements OnInit, OnDestroy {
   events: any[] = [];
   editIcon = faPencilAlt;
 
-  constructor(public http: HttpService) { }
+  constructor(public http: HttpService) {
+  }
 
   ngOnInit() {
     this.dtOptions = {

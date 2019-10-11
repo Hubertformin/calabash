@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {CarouselModule} from 'ngx-carousels';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {NgxDatePickerModule} from 'ngx-date-picker-fns';
 
 
 
@@ -17,7 +18,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
   exports: [
     CarouselModule,
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ]
 })
 export class SharedModule { }

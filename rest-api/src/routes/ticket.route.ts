@@ -41,20 +41,12 @@ TicketRouter.get("/purchase-code/:purchaseCode", (req, res) => {
 });
 
 // Create a ticket
-TicketRouter.put("/", (req, res) => {
+TicketRouter.post("/", (req, res) => {
     // Ticket details and event id sent in request body
-    const {firstName, lastName, purchaseCode, createdAt, updatedAt, eventId } = req.body;
-    TicketEntity.create({firstName, lastName, purchaseCode, createdAt, updatedAt}).save()
+    const {firstName, lastName, purchaseCode, event} = req.body;
+    TicketEntity.create({firstName, lastName, purchaseCode, event}).save()
     .then(ticket => {
-        EventEntity.findOne(eventId)
-        .then(event => {
-            ticket.event = event;
-            res.json(ticket);
-        })
-        .catch(err => {
-            console.log("Couldn't find event")
-            res.status(400).end();
-        });
+        res.json(ticket);
     })
     .catch(err => {
         console.log("Error creating ticket");
@@ -63,9 +55,9 @@ TicketRouter.put("/", (req, res) => {
 });
 
 // Update a ticket
-TicketRouter.post("/:id", (req, res) => {
-    const {firstName, lastName, purchaseCode, createdAt, updatedAt } = req.body;
-    TicketEntity.update(req.params.id, {firstName, lastName, purchaseCode, createdAt, updatedAt })
+TicketRouter.put("/:id", (req, res) => {
+    const {firstName, lastName, purchaseCode, event } = req.body;
+    TicketEntity.update(req.params.id, {firstName, lastName, purchaseCode, event })
     .then(ticket => {
         res.json(ticket);
     })
