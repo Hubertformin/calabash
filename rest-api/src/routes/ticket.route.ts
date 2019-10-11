@@ -1,4 +1,5 @@
 import { TicketEntity } from "../entity/ticket.entity";
+import { EventEntity } from "../entity/event.entity";
 
 const express = require("express");
 export const TicketRouter = express.Router();
@@ -37,4 +38,46 @@ TicketRouter.get("/purchase-code/:purchaseCode", (req, res) => {
     .catch(err => {
         res.status(400).end();
     });
+});
+
+// Create a ticket
+TicketRouter.put("/", (req, res) => {
+    // Ticket details and event id sent in request body
+    const {firstName, lastName, purchaseCode, createdAt, updatedAt, eventId } = req.body;
+    TicketEntity.create({firstName, lastName, purchaseCode, createdAt, updatedAt}).save()
+    .then(ticket => {
+        EventEntity.findOne(eventId)
+        .then(event => {
+            ticket.event = event;
+            res.json(ticket);
+        })
+        .catch(err => {
+            console.log("Couldn't find event")
+            res.status(400).end();
+        });
+    })
+    .catch(err => {
+        console.log("Error creating ticket");
+        res.status(400).end();
+    });
+});
+
+// Update a ticket
+TicketRouter.post("/:id", (req, res) => {
+    const {firstName, lastName, purchaseCode, createdAt, updatedAt } = req.body;
+    TicketEntity.update(req.params.id, {firstName, lastName, purchaseCode, createdAt, updatedAt })
+    .then(ticket => {
+        res.json(ticket);
+    })
+    .catch(err => {
+        console.log("Couldn't update ticket");
+        res.status(400).end();
+    });
+});
+
+// Delete a ticket
+TicketRouter.delete("/:id", (req, res) => {
+    TicketEntity.delete(req.params.id)
+    .then(ticket => res.json({}))
+    .catch(err => res.status(400).end());
 });
