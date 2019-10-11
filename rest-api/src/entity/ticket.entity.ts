@@ -12,7 +12,7 @@ export class TicketEntity extends BaseEntity {
     @Column()
     lastName: string
 
-    @Column()
+    @Column({unique: true})
     purchaseCode: string;
 
     @ManyToOne(type => EventEntity, event => event.tickets)

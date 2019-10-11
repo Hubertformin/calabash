@@ -40,6 +40,7 @@ EventRouter.delete('/:id', (req, res) => {
 
 //Update an event 
 EventRouter.post('/:id', (req, res) => {
+    //Destructure event from request body
     const {id, startDate, endDate, name, description, venue, imageUrl, ticketLimit, artists, createdAt, updatedAt} = req.body;
     EventEntity.update(req.params.id, {
         id,
@@ -62,7 +63,16 @@ EventRouter.post('/:id', (req, res) => {
 });
 
 //Create an event
-EventRouter.post("/", (req, res) => {
+EventRouter.put("/", (req, res) => {
+    //destructure attributes from request body
+    const {id, startDate, endDate, name, description, venue, imageUrl, ticketLimit, artists, createdAt, updatedAt} = req.body;
 
+    //Create event and return
+    EventEntity.create({id, startDate, endDate, name, description, venue, imageUrl, ticketLimit, artists, createdAt, updatedAt}).save()
+    .then(event => {
+        res.json(event);
+    }).catch(err => {
+        res.status(400).end();
+    });
 });
 
