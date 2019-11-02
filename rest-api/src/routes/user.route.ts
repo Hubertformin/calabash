@@ -11,7 +11,7 @@ UserRouter.get('/', (req, res) => {
     }).catch(err => {
         // TODO: reply with error status
         console.error(err);
-        res.status(400).end();
+        res.status(400).send('Failed to get users. Please try again later.');
     });
 })
 
@@ -26,7 +26,8 @@ UserRouter.get('/auth/:username/:password', (req, res) => {
         res.json(user);
     })
     .catch(err => {
-        res.status(400).end()
+        console.error(err);
+        res.status(400).send('Failed to authenticate user');
     })
 });
 

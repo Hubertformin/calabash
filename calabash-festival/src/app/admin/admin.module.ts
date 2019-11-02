@@ -12,10 +12,12 @@ import { AdminToolbarComponent } from './@components/admin-toolbar/admin-toolbar
 import {SharedModule} from '../modules/shared/shared.module';
 import { EventsComponent } from './events/events.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
 
 
 @NgModule({
-  declarations: [AuthComponent, DashboardComponent, AdminToolbarComponent, EventsComponent, TicketsComponent],
+  declarations: [AuthComponent, DashboardComponent, AdminToolbarComponent, EventsComponent, TicketsComponent, CreateEventComponent, UpdateEventComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

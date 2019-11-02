@@ -11,8 +11,8 @@ EventRouter.get('/', (req, res) => {
     .then((events) => {
         res.json(events);
     }).catch(err => {
-        res.status(400).end();
         console.error(err);
+        res.status(400).send('Failed to get events. Please try again later.');
     });
 });
 
@@ -22,8 +22,8 @@ EventRouter.get('/:id', (req, res) => {
     .then(event => {
         res.json(event);
     }).catch(err => {
-        res.status(400).end();
         console.error(err);
+        res.status(400).send('Failed to get event. Please try again later');
     });
 });
 
@@ -34,7 +34,8 @@ EventRouter.delete('/:id', (req, res) => {
         res.json({});
     })
     .catch(err => {
-        res.status(400).end();
+        console.error(err)
+        res.status(400).send('Failed to delete event. Please try again');
     });
 });
 
@@ -56,7 +57,8 @@ EventRouter.post('/:id', (req, res) => {
         res.json(event);
     })
     .catch(err => {
-        res.status(400).end();
+        console.error(err);
+        res.status(400).send('Failed to update event; Please try again later.');
     });
 });
 
@@ -70,7 +72,8 @@ EventRouter.put("/", (req, res) => {
     .then(event => {
         res.json(event);
     }).catch(err => {
-        res.status(400).end();
+        console.error(err);
+        res.status(400).send('Failed to create event; Please try again later');
     });
 });
 

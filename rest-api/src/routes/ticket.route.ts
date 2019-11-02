@@ -10,7 +10,8 @@ TicketRouter.get("/", (req, res) => {
     .then(tickets => {
         res.json(tickets);
     }).catch(err => {
-        res.status(400).end();
+        console.error(err);
+        res.status(400).send('Failed to get tickets. Please try again later');
     });
 });
 
@@ -21,7 +22,8 @@ TicketRouter.get("/:id", (req, res) => {
         res.json(ticket);
     })
     .catch(err => {
-        res.status(400).end();
+        console.log(err);
+        res.status(400).send("Error getting tickets; Please try again later");
     });
 });
 
@@ -36,12 +38,13 @@ TicketRouter.get("/purchase-code/:purchaseCode", (req, res) => {
         res.json(ticket);
     })
     .catch(err => {
-        res.status(400).end();
+        console.log(err);
+        res.status(400).send("Error getting ticket; Please try again later");
     });
 });
 
 // Create a ticket
-TicketRouter.post("/", (req, res) => {
+TicketRouter.put("/", (req, res) => {
     // Ticket details and event id sent in request body
     const {firstName, lastName, purchaseCode, event} = req.body;
     TicketEntity.create({firstName, lastName, purchaseCode, event}).save()
@@ -49,8 +52,8 @@ TicketRouter.post("/", (req, res) => {
         res.json(ticket);
     })
     .catch(err => {
-        console.log("Error creating ticket");
-        res.status(400).end();
+        console.log(err);
+        res.status(400).send("Error creating ticket; Please try again later");
     });
 });
 
@@ -62,8 +65,8 @@ TicketRouter.post("/:id", (req, res) => {
         res.json(ticket);
     })
     .catch(err => {
-        console.log("Couldn't update ticket");
-        res.status(400).end();
+        console.log(err);
+        res.status(400).send("Error updating ticket; Please try again later");
     });
 });
 
@@ -71,5 +74,8 @@ TicketRouter.post("/:id", (req, res) => {
 TicketRouter.delete("/:id", (req, res) => {
     TicketEntity.delete(req.params.id)
     .then(ticket => res.json({}))
-    .catch(err => res.status(400).end());
+    .catch(err => {
+        console.log(err);
+        res.status(400).send("Error deleting ticket; Please try again later");
+    });
 });

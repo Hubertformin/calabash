@@ -1,27 +1,72 @@
 <app-toolbar></app-toolbar>
 
 <section id="banner">
-  <ring-carousel #carousel ringsDuration="800" [enableControl]="false" ringsDelay="100" ringsCount="6">
+  <ring-carousel #carousel ringsDuration="800" ringColor="#f2d024" [enableControl]="false" ringsDelay="100" ringsCount="6">
+<!--    vvip-->
     <ng-template ringCarouselItem>
-      <div style= "height: 500px;" class="bg-green">
-        <div class="text-center">1st div</div>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-vv-50-1.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">VVIP</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
       </div>
     </ng-template>
+<!--    vip-->
     <ng-template ringCarouselItem>
-      <div style= "height: 500px;" class="bg-blue">
-        <div class="text-center">2nd div</div>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-v-25.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">VIP</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
       </div>
     </ng-template>
+<!--    standard-->
     <ng-template ringCarouselItem>
-      <div style= "height: 500px;" class="bg-orange">
-        <div class="text-center">3rd div</div>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-s-10.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">STANDARD</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
       </div>
     </ng-template>
+<!--   vvip -->
+    <ng-template ringCarouselItem>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-vv-50.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">VVIP</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
+      </div>
+    </ng-template>
+<!--    vip -->
+    <ng-template ringCarouselItem>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-v-25-2.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">VIP</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
+      </div>
+    </ng-template>
+<!--    standard-->
+    <ng-template ringCarouselItem>
+      <div class="banner-child">
+        <img src="../../../assets/images/banner-s-10.jpeg" alt="">
+        <div class="text-container">
+          <h1 class="text-4xl my-2">STANDARD</h1>
+          <a target="_blank" href="https://www.e-tickets.cm" class="rounded outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy now</a>
+        </div>
+      </div>
+    </ng-template>
+<!--    -->
   </ring-carousel>
-  <button id="carouselNextBtn" class="d-none" (click)="carousel.next()"></button>
 </section>
 <!-- section === about-->
-<section id="about" class="pt-32 pb-6">
+<section id="about" class="section">
   <section class="section-title text-center px-8">
     <h2 class="title font-vibes">About</h2>
     <p class="line"><span></span></p>
@@ -32,21 +77,21 @@
       <div class="row">
         <div class="col-sm-4 mb-16 text-center">
           <!--        <img src="../../../assets/images/big-concert.jpg" alt="" class="my-2 rounded-full" />-->
-          <h4 class="mb-4 text-theme">Big concert</h4>
+          <h1 class="mb-4 text-theme">Big concert</h1>
           <p>
             One big international artist will join two big Cameroonian artists for a lavish weekend of music at Cameroon’s most prestigious concert Arena, Las Vegas VIP (sits 2000 people in comfort, all with a clear view of the stage), as well as other venues such as stadiums/CAMTEL Bepanda.
           </p>
         </div>
         <div class="col-sm-4 mb-16 text-center">
           <!--        <img src="../../../assets/images/music-night.jpg" alt="" class="my-2 rounded-full" />-->
-          <h4 class="mb-4 text-theme">Industry Discovery Night </h4>
+          <h1 class="mb-4 text-theme">Industry Discovery Night </h1>
           <p>
             to take place at Las Vegas VIP 2 weeks before each Big Concert  - an established artist performs alongside many upcoming artists, and the platform helps expose the young artists to the media and promoters. From this platform, one upcoming artist is chosen to open up for the main artists at the BIG CONCERT.
           </p>
         </div>
         <div class="col-sm-4 mb-16 text-center">
           <!--        <img src="../../../assets/images/music-concert.jpg" alt="" class="my-2 rounded-full" />-->
-          <h4 class="mb-4 text-theme">Music concert</h4>
+          <h1 class="mb-4 text-theme">Music concert</h1>
           <p>
             2 days before event, music professionals, artists, media, and other stakeholders will  meet to discuss salient issues concerning the Cameroonian Music industry and propose solutions, while benefiting from input  from invited international artists and major Cameroonian acts involved in the BIG CONCERTS.
           </p>
@@ -55,107 +100,202 @@
     </div>
   </section>
 </section>
-<!-- Events -->
-<section id="events" class="pt-32">
+
+<!--tickets-->
+<section id="tickets" class="pt-32">
   <section class="section-title text-center">
-    <h2 class="title font-vibes">Events</h2>
+    <h2 class="title font-vibes">Tickets</h2>
     <p class="line"><span></span></p>
   </section>
   <section class="section-body py-6">
-      <section class="tabs-container text-center py-8 h-32 px-2">
-        <button (click)="eventTab = 'upcoming'" [ngClass]="{'bg-yellow-dark': eventTab === 'upcoming' }" class="rounded-full outline-none py-3 cursor-pointer px-6 shadow mr-1">Upcoming events</button>|
-        <button (click)="eventTab = 'passed'" [ngClass]="{'bg-yellow-dark': eventTab === 'passed' }"
-                class="rounded-full outline-none py-3 cursor-pointer px-6 shadow ml-1">Passed events</button>
-      </section>
-      <section [ngSwitch]="eventTab" class="tab-view">
-        <!--    upcoming events-->
-        <div *ngSwitchCase="'upcoming'" id="upcoming_events" class="row px-8 pt-6">
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 pt-2">
-                <div class="font-bold text-xl mb-2">The calabash event</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-              <div class="px-6 py-3 text-center">
-                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 pt-2">
-                <div class="font-bold text-xl mb-2">The calabash event</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-              <div class="px-6 py-3 text-center">
-                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 pt-2">
-                <div class="font-bold text-xl mb-2">The calabash event</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-              <div class="px-6 py-3 text-center">
-                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--    passed events-->
-        <div *ngSwitchCase="'passed'" id="passed_events" class="row px-8 pt-6">
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">The calabash event(Passed)</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">The calabash event</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 my-2">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">The calabash event</div>
-                <p class="text-gray-700 text-base">This is the calabash event</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<!--    <section class="tabs-container text-center py-8 h-32 px-2">-->
+<!--      <button (click)="eventTab = 'upcoming'" [ngClass]="{'bg-yellow-dark': eventTab === 'upcoming' }" class="rounded-full outline-none py-3 cursor-pointer px-6 shadow mr-1">Upcoming events</button>|-->
+<!--      <button (click)="eventTab = 'passed'" [ngClass]="{'bg-yellow-dark': eventTab === 'passed' }"-->
+<!--              class="rounded-full outline-none py-3 cursor-pointer px-6 shadow ml-1">Passed events</button>-->
+<!--    </section>-->
+   <section class="row tickets-container">
+     <div class="col-sm-4 my-2">
+       <div class="max-w-sm rounded overflow-hidden shadow-lg">
+         <img class="w-full" src="../../../assets/images/tickets/s10.jpeg" alt="event_image">
+         <div class="px-6 pt-2">
+           <div class="font-bold text-xl mb-2">Standard</div>
+           <p class="text-2xl font-black">{{ 10000 | currency: 'FCFA ': 'symbol': '1.0'}}</p>
+         </div>
+         <div class="px-6 py-3 text-center">
+           <a target="_blank" href="https://www.e-tickets.cm" class="btn rounded-full outline-none bg-yellow-dark py-3 my-2 cursor-pointer px-6 shadow">Buy ticket</a>
+         </div>
+       </div>
+     </div>
+<!--     -->
+     <div class="col-sm-4 my-2">
+       <div class="max-w-sm rounded overflow-hidden shadow-lg">
+         <img class="w-full" src="../../../assets/images/tickets/v25_2.jpeg" alt="event_image">
+         <div class="px-6 pt-2">
+           <div class="font-bold text-xl mb-2">VIP</div>
+           <p class="text-2xl font-black">{{ 25000 | currency: 'FCFA ': 'symbol': '1.0'}}</p>
+         </div>
+         <div class="px-6 py-3 text-center">
+           <a target="_blank" href="https://www.e-tickets.cm" class="btn rounded-full outline-none bg-yellow-dark py-3 my-2 cursor-pointer px-6 shadow">Buy ticket</a>
+         </div>
+       </div>
+     </div>
+     <!--     -->
+     <div class="col-sm-4 my-2">
+       <div class="max-w-sm rounded overflow-hidden shadow-lg">
+         <img class="w-full" src="../../../assets/images/tickets/vv-50.jpeg" alt="event_image">
+         <div class="px-6 pt-2">
+           <div class="font-bold text-xl mb-2">VVIP</div>
+           <p class="text-2xl font-black">{{ 50000 | currency: 'FCFA ': 'symbol': '1.0'}}</p>
+         </div>
+         <div class="px-6 py-3 text-center">
+           <a target="_blank" href="https://www.e-tickets.cm" class="btn rounded-full outline-none bg-yellow-dark py-3 my-2 cursor-pointer px-6 shadow">Buy ticket</a>
+         </div>
+       </div>
+     </div>
+   </section>
+
   </section>
 </section>
+
+<!-- Events -->
+<!--<section id="events" class="pt-32">-->
+<!--  <section class="section-title text-center">-->
+<!--    <h2 class="title font-vibes">Events</h2>-->
+<!--    <p class="line"><span></span></p>-->
+<!--  </section>-->
+<!--  <section class="section-body py-6">-->
+<!--      <section class="tabs-container text-center py-8 h-32 px-2">-->
+<!--        <button (click)="eventTab = 'upcoming'" [ngClass]="{'bg-yellow-dark': eventTab === 'upcoming' }" class="rounded-full outline-none py-3 cursor-pointer px-6 shadow mr-1">Upcoming events</button>|-->
+<!--        <button (click)="eventTab = 'passed'" [ngClass]="{'bg-yellow-dark': eventTab === 'passed' }"-->
+<!--                class="rounded-full outline-none py-3 cursor-pointer px-6 shadow ml-1">Passed events</button>-->
+<!--      </section>-->
+<!--      <section [ngSwitch]="eventTab" class="tab-view">-->
+<!--        &lt;!&ndash;    upcoming events&ndash;&gt;-->
+<!--        <div *ngSwitchCase="'upcoming'" id="upcoming_events" class="row px-8 pt-6">-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 pt-2">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--              <div class="px-6 py-3 text-center">-->
+<!--                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 pt-2">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--              <div class="px-6 py-3 text-center">-->
+<!--                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 pt-2">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--              <div class="px-6 py-3 text-center">-->
+<!--                <button class="rounded-full outline-none bg-yellow-dark py-3 cursor-pointer px-6 shadow">Buy tickets</button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;    passed events&ndash;&gt;-->
+<!--        <div *ngSwitchCase="'passed'" id="passed_events" class="row px-8 pt-6">-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 py-4">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event(Passed)</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 py-4">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-sm-4 my-2">-->
+<!--            <div class="max-w-sm rounded overflow-hidden shadow-lg">-->
+<!--              <img class="w-full" src="assets/images/card-top.jpg" alt="event_image">-->
+<!--              <div class="px-6 py-4">-->
+<!--                <div class="font-bold text-xl mb-2">The calabash event</div>-->
+<!--                <p class="text-gray-700 text-base">This is the calabash event</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--  </section>-->
+<!--</section>-->
 
 <!-- partners logo-->
 <section id="partners">
 <!--  logos-->
   <div class="bg w-full h-full px-8 py-20">
     <h1 class="py-6">Our partners</h1>
-    <img src="../../../assets/images/Trace_Africa_logo_2011.svg.png" class="" alt="">
-    <img src="../../../assets/images/equinox.jpg" class="" alt="">
-    <img src="../../../assets/images/canal-2.jpg" class="" alt="">
-    <img src="../../../assets/images/abk-logo.png" class="" alt="">
-    <img src="../../../assets/images/balafon-logo.png" class="" alt="">
+<!--    <img src="../../../assets/images/partners/Trace_Africa_logo_2011.svg.png" class="" alt="">-->
+<!--    <img src="../../../assets/images/partners/canal-2.jpg" class="" alt="">-->
+<!--    <img src="../../../assets/images/partners/mmusic.jpg" class="" alt="">-->
+<!--    <img src="../../../assets/images/partners/abk-logo.png" class="" alt="">-->
+<!--    <img src="../../../assets/images/partners/balafon-logo.png" class="" alt="">-->
+<!--    <img src="../../../assets/images/partners/equinox.jpg" class="" alt="">-->
+<!--    carousel-->
+    <rotate-carousel height="300px" width="450px" depth="700px" period="2.5s" direction="reverse">
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/Trace_Africa_logo_2011.svg.png" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/canal-2.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/calabash-music.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/mmusic.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/abk-logo.png" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/balafon-logo.png" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/equinox.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/paradis-club.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/njeiforbi.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/belaire.jpg" class="" alt="">
+      </ng-template>
+      <ng-template rotateCarouselItem>
+        <img src="../../../assets/images/partners/1664.jpg" class="" alt="">
+      </ng-template>
+
+    </rotate-carousel>
   </div>
 </section>
 
 <!-- contact -->
-<section id="contact" class="py-32">
+<section id="contact" class="py-10">
   <section class="section-title text-center">
     <h2 class="title font-vibes">Contact Us</h2>
     <p class="line"><span></span></p>

@@ -1,5 +1,49 @@
 @import "../../@mixins/mixins";
 
+#banner {
+  overflow: hidden;
+  .banner-child {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+    .text-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 4rem 2.75rem 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+    }
+
+    @include md-screens {
+      height: 395px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .text-container {
+        padding: 15rem 2.75rem 0 2.7rem;
+      }
+    }
+
+  }
+  a {
+
+  }
+}
+
+a.btn, #banner a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .section-title {
   .title {
     font-size: 4rem;
@@ -42,11 +86,25 @@ p.line {
   color: #ffffff;
 }
 
+.tickets-container {
+  padding: 1.5rem;
+  @include md-screens {
+    padding: 4rem;
+  }
+}
+
 #events {
   .tab-view {
     @include md-screens {
       padding: 0 3rem;
     }
+  }
+}
+
+.section {
+  padding: 4rem 0;
+  @include md-screens {
+    padding: 8rem 0;
   }
 }
 
@@ -60,8 +118,8 @@ p.line {
     height: auto;
     margin: .85rem 0;
     @include md-screens {
-      width: auto;
-      height: 100px;
+      width: 50%;
+      height: auto;
       margin: 0 0.75rem;
     }
   }
@@ -80,7 +138,7 @@ p.line {
 }
 
 div.bg {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
   color: #ffffff;
